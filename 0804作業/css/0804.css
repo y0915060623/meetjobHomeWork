@@ -1,0 +1,63 @@
+body{
+
+	margin: 0 auto; 
+	height: 100%; 
+
+}
+
+
+#wrapper{
+min-height: 100%;  
+
+
+}
+
+#banner{
+	float: left;
+	padding-left: 3%;
+	height: 80px;
+	min-width: 20px;
+	width: 100%;
+
+	
+}
+
+
+
+#content{
+	width: 100%;
+	background-color:#00ff00;
+}
+
+#content img{
+
+	width: 100%;
+	min-height: 300px;
+}
+#left{
+	min-width: 20px;
+	float: left;
+	height: 100px;
+	width: 15%;
+}
+
+.right{
+	width: 80px;
+	float: right;
+}
+
+
+.info{
+
+height: 200px;
+width: 20%;
+float: left; 
+padding: 0px; /*上下左右都20px */
+/* margin 外部距離，內容同上padding */
+margin: 33px;
+
+
+}
+
+
+
