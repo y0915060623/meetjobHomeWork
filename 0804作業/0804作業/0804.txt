@@ -1,0 +1,9 @@
+body{
+
+height:100%;
+
+}
+
+<div>banner</div> 放LOGO 外距3%  FB IG TW 浮在右邊
+
+content 放圖片 要有間隔 四張圖
