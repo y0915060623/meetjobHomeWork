@@ -1,0 +1,41 @@
+
+#info1{
+	
+	height:230px;
+	width:930px;
+	background-color:red;
+	color: #ffffff;
+	text-align: left;
+}
+#info1 h6{
+	text-align: right;
+}
+#info2{
+    
+	min-height:300px;
+	width:930px;
+	background-color:red;
+	color: #ffffff;
+	text-align: left;
+}
+
+#info2 h6{
+	text-align: right;
+	margin-left:100px ;
+}
+
+#info2 img{
+
+	float: left;
+	text-align: right;
+	margin-left: 350px;
+
+}
+
+#info2 h2{
+
+	text-align: left;
+	margin-right: 120px;
+	
+
+}
