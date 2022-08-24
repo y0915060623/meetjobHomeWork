@@ -1,0 +1,227 @@
+
+<html>
+<head>
+	<meta charset="utf-8">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+	<title>meetjob0823作業</title>
+
+	<style>
+
+		body{
+			margin: 0 auto;
+		}
+
+		#menu{
+
+			width: 100%;
+			height: 70px;
+			background-color:#555;
+
+		}
+
+		#menulist{
+			position:absolute;  /*定位 : fix 固定  absolute 依父位置做絕對位置*/
+			height: 70px;
+
+		}
+
+		#menulist , #menulist ul{
+			list-style: none;
+			padding: 0;
+			margin: 0;
+			
+		}
+
+		#menulist li{
+			border-right: 1px solid #ffffff;
+			float: left;
+			background-color:#555;
+			list-style: none;
+		}
+
+		#menulist a{
+			color: #ffffff;
+			display: block;
+			text-decoration: none;
+			width: 80px;
+		}
+
+		#menulist li ul{
+			position: absolute; /* 位置是絕對位置 */
+			left: auto;    /*對於絕對位置元素, 會依內容需要的寬度來設置*/
+			width: 80px;
+		}
+
+		#banner{
+			margin:auto 0px;
+			width: 100%;
+			height: 80px;
+			background-color:green;
+		}
+
+		#content img{
+
+			width: 100%;
+			height: 200px;
+		}
+
+		#footer{
+			width: 100%;
+			height: 145px;
+			
+			
+
+		}
+
+		
+
+
+
+	</style>
+
+	<script>
+
+		$(document).ready(function(){
+
+			$("#menulist li ul").hide();
+			$("#menulist li").hover(
+
+				function(){
+					$(this).find("ul").slideDown('fast');
+					$(this).find("a:first").addClass("active");
+				},function(){
+					$(this).find(".submenu").fadeOut('fast');
+					$(this).find("a").removeClass("active");
+				}
+
+			)
+		});
+
+	</script>	
+
+
+</head>
+<body>
+
+	<div id="banner">
+
+	</div>	
+
+	<div id="menu">
+
+		<ul id="menulist">
+
+
+			<li><a href="#">產品</a>
+				<ul class="submenu">
+					<li><a href="#">3C</a></li>
+					<li><a href="#">家電</a></li>
+					<li><a href="#">汽車</a></li>
+				</ul>	
+
+			</li>
+
+			<li><a href="#">服務</a>
+				<ul class="submenu">
+					<li><a href="#">Line</a></li>
+					<li><a href="#">來電客服</a></li>
+					<li><a href="#">據點位置</a></li>
+				</ul>	
+
+			</li>
+
+			<li><a href="#">聯絡我們</a>
+				<ul class="submenu">
+					<li><a href="#">Line</a></li>
+					<li><a href="#">微薄</a></li>
+					<li><a href="#">推特</a></li>
+				</ul>	
+
+			</li>
+
+			<li><a href="#">地圖資訊</a>
+				<ul class="submenu">
+					<li><a href="#">GoogleMap</a></li>
+					<li><a href="#">傳統地圖</a></li>
+					<li><a href="#">專人指引</a></li>
+				</ul>	
+
+			</li>
+
+			<li><a href="#">停車資訊</a>
+				<ul class="submenu">
+					<li><a href="#">三民停車場</a></li>
+					<li><a href="#">站前停車場</a></li>
+					<li><a href="#">逢甲停車場</a></li>
+				</ul>	
+
+			</li>
+
+
+		</ul>	
+
+	</div>
+
+	<div id="content">
+		<img src="img/code.png">
+	</div>
+
+	
+<div id="blue" style="width:100%;height:200px;background-color:#0000ff;">
+	
+	<div id="red" style="width:100%;height:100px;background-color:#ff0000;">
+
+	</div>	
+
+</div>
+
+
+	
+<script>
+	$(document).ready(function(){
+
+		$("#red").click(function(){
+			
+			$("#blue").slideToggle(); //收起來
+			
+			// .slideUp(); 收起來
+			// .slideDown(); 放下
+			// .slideToggle();
+
+		})
+	
+	});
+</script>
+
+<script type="text/javascript">
+
+		function touch(){
+			var age = prompt("請輸入年齡","0")
+		if(age>=15 && age<=50){
+		alert("你可以瀏覽網頁");
+	}else{
+		//document.write("你未滿18歲");
+		alert("警告視窗");
+
+	}		
+
+			}
+</script>
+
+<div id="footer">
+
+
+
+年齡<input style="width:100px;height:100px;" type="number" name="age" required />
+
+<input style="width:100px;height:100px;margin-left:800px" type="button" onclick="touch()" value="按鈕" />
+	
+	
+
+</div>
+
+
+</body>
+
+
+</html>
