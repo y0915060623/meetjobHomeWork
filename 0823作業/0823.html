@@ -196,7 +196,7 @@
 <script type="text/javascript">
 
 		function touch(){
-			var age = prompt("請輸入年齡","0")
+			var age = $("#age").val();
 		if(age>=15 && age<=50){
 		alert("你可以瀏覽網頁");
 	}else{
@@ -212,7 +212,7 @@
 
 
 
-年齡<input style="width:100px;height:100px;" type="number" name="age" required />
+年齡<input style="width:100px;height:100px;" type="number" name="age" id="age" required />
 
 <input style="width:100px;height:100px;margin-left:800px" type="button" onclick="touch()" value="按鈕" />
 	
