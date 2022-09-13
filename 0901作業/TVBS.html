@@ -1,0 +1,267 @@
+
+<html>
+<head>
+	<meta charset="utf-8">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+	<title>練習</title>
+
+	<style>
+
+		body{
+
+			margin: 0 auto;
+		}
+
+		#wrapper{
+
+			width: 100%;
+			height: 100%;
+			margin-bottom: -100px;
+
+		}
+
+		#banner{
+
+			width: 100%;
+			height: 70px;
+
+		}
+
+		#menu{
+
+			width: 100%;
+			height: 40px;
+			background-color: #0000ff;
+
+
+
+		}
+
+		#menulist{
+			position:absolute;  /*定位 : fix 固定  absolute 依父位置做絕對位置*/
+			height: 70px;
+
+		}
+
+		#menulist , #menulist ul{
+			list-style: none;
+			padding: 0;
+			margin: 0;
+			
+		}
+
+		#menulist li{
+			border-right: 1px solid #ffffff;
+			float: left;
+			background-color:blue;
+			list-style: none;
+		}
+
+		#menulist a{
+			color: #ffffff;
+			display: block;
+			text-decoration: none;
+			width: 120px;
+		}
+
+		#menulist li ul{
+			position: absolute; /* 位置是絕對位置 */
+			left: auto;    /*對於絕對位置元素, 會依內容需要的寬度來設置*/
+			width: 80px;
+		}
+
+
+
+
+		#ad{
+
+			width: 100%;
+			height: 350px;
+			background-color:#ff0000;
+
+		}
+
+		#news{
+			clear: both;
+			width: 100%;
+			height: 200px;
+			
+		}
+
+		#footer{
+
+			height: 100px;
+			background-color:#000000 ;
+		}
+
+		.adLeft{
+
+			width: 65%;
+			float: left;
+			height: 350px;
+			background-color: #ffff00;
+		}
+
+		.adLeft img{
+
+			width: 100%;
+			height: 350px;
+			
+		}
+
+		.adRight{
+
+			width: 35%;
+			float: left;
+			height: 350px;
+			background-color:#000000;
+		}
+
+		.imgR{
+
+			width: 100%;
+			height: 350px;
+			
+		}
+
+		.imgR img{
+
+			width: 32%;
+			height: 350px;
+		}
+
+		#logo img{
+		
+		width: 100%;
+		height: 60px;
+		float: left;
+		margin-left: 3%;
+
+		}
+
+		.search{
+
+		width: 130px;
+		height: 40px;
+		float: right;
+
+	}		
+
+
+	</style>
+
+	<script>	
+
+			$(document).ready(function(){
+
+			$("#menulist li ul").hide();
+			$("#menulist li").hover(
+
+				function(){
+					$(this).find("ul").slideDown('fast');
+					$(this).find("a:first").addClass("active");
+				},function(){
+					$(this).find(".submenu").fadeOut('fast');
+					$(this).find("a").removeClass("active");
+				}
+
+			)
+			
+			
+
+		});
+</script>
+  	
+  
+
+</head>
+<body>
+
+	<div id="wrapper">
+
+		<div id="banner">
+		<img id="logo" src="img/TVBS.svg">
+		<img class="search" src="img/search.svg">
+		<input class="search" type="search" placeholder="關鍵字">
+		</div>
+		
+		<div id="menu">
+			<ul id="menulist">
+				
+			<li><a href="#">TVBS新聞</a></li>
+			<li><a href="#">女人我最大</a></li>
+			<li><a href="#">食尚玩家</a></li>
+			<li><a href="#">健康2.0</a></li>
+			<li><a href="#">地球黃金線</a></li>
+				
+					<li><a href="#">節目</a>
+				<ul class="submenu">
+					<li><a href="#">Focus全球新聞</a></li>
+					<li><a href="#">T觀點</a></li>
+					<li><a href="#">據點位置</a></li>
+					<li><a href="#">中國進行式</a></li>
+					<li><a href="#">少康戰情室</a></li>
+					<li><a href="#">世界翻轉中</a></li>
+					<li><a href="#">看板人物</a></li>
+					</li>
+				</ul>
+
+				<li><a href="#">戲劇</a>
+				<ul class="submenu">
+					<li><a href="#">校園機智生活</a></li>
+					<li><a href="#">天堂的微笑</a></li>
+					<li><a href="#">女兵日記</a></li>
+					<li><a href="#">翻牆的回憶</a></li>
+					<li><a href="#">酸甜之味</a></li>
+					<li><a href="#">在一起,就好</a></li>
+					<li><a href="#">遺憾拼圖</a></li>
+					<li><a href="#">初戀的情人</a></li>
+					<li><a href="#">16個夏天</a></li>
+					<li><a href="#">戲劇製作部人</a></li>
+					</li>
+				</ul>
+				<li><a href="#">享時尚</a></li>
+				<li><a href="#">基金會</a></li>
+				<li><a href="#">頻道資訊</a>
+				<ul class="submenu">
+					<li><a href="#">節目表</a></li>
+					<li><a href="#">TVBS精彩台</a></li>
+					<li><a href="#">TVBS Asia</a></li>
+					<li><a href="#">新媒體數位節目</a></li>
+				</li>			
+				</ul>
+				<li><a href="#">更多</a>
+				<ul class="submenu">
+					<li><a href="#">關於我們</a></li>
+					<li><a href="#">官方聲明</a></li>
+					<li><a href="#">業務服務</a></li>
+					<li><a href="#">人才招募</a></li>
+				</li>			
+				</ul>
+		</div>
+
+		<div id="ad">
+			<div class="adLeft">
+				<img src="img/04.jpg">
+			</div>
+			<div class="adRight">
+				<div class="imgR">
+					
+					<img src="img/new1.jpg">
+					<img src="img/new2.jpg">
+					<img src="img/new3.jpg">
+					
+				</div>	
+			</div>
+		</div>		
+				
+
+		<div id="news">
+			
+		</div>
+
+		<div id="footer">
+		</div>	
+
+</body>
+</html>
